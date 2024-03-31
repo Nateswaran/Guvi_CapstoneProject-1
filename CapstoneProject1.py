@@ -379,13 +379,13 @@ def show_comments_table():
 #Streamlit
 
 with st.sidebar:
-    st.title(":red[YOUTUBE DATA HARVESTING AND WAREHOUSING]")
-    st.header("Skills Take Away")
-    st.caption("Python Scripting")
-    st.caption("Data Collection")
-    st.caption("MongoDB")
-    st.caption("API Integeration")
-    st.caption("Data Management using MongoDB and SQL")
+    st.title(":violet[YOUTUBE DATA HARVESTING AND WAREHOUSING]")
+    st.header("Skills Take Away",divider='rainbow')
+    st.caption(":blue[Python Scripting]")
+    st.caption(":blue[Data Collection]")
+    st.caption(":blue[MongoDB]")
+    st.caption(":blue[API Integeration]")
+    st.caption(":blue[Data Management using MongoDB and SQL]")
     
 channel_id = st.text_input("Enter the channel ID")
 
@@ -415,12 +415,12 @@ if st.button('Migrate to SQL'):
     Table = tables(unique_channel)
     st.success(Table)
     
-show_table = st.radio("SELECT THE TABLE FOR VIEW",("CHANNELS","VIDEOS","COMMENTS"))
+show_table = st.radio("SELECT THE TABLE FOR VIEW",(":rainbow[CHANNELS]","VIDEOS:movie_camera:","COMMENTS"))
 
-if show_table == 'CHANNELS':
+if show_table == ':rainbow[CHANNELS]':
     show_channels_table()
     
-elif show_table == 'VIDEOS':
+elif show_table == 'VIDEOS:movie_camera:':
     show_videos_table()
     
 elif show_table == 'COMMENTS':
